@@ -16,7 +16,7 @@ func (c *Course) ChangePrice(price float64) {
 	c.Price = price
 }
 
-func (c Course) PrintClasses() {
+func (c *Course) PrintClasses() {
 	text := "The subjects are: "
 	for _, class := range c.Classes {
 		text += class + ", "
@@ -38,7 +38,7 @@ func main() {
 		},
 	}
 
-	
+
 	(&Go).ChangePrice(67.12) // Also valid Go.ChangePrice(67.12)
 	fmt.Printf("Course price: %v\n", Go.Price)
 }
