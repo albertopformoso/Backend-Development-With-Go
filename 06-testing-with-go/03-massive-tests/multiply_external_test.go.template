@@ -1,0 +1,15 @@
+package main_test
+
+import (
+	"testing"
+
+	"go-tests/main"
+)
+
+func TestMultiply(t *testing.T) {
+	want := 6
+	got := main.Multiply(2, 3)
+	if got != want {
+		t.Errorf("Se esperaba %d, se obtuvo %d", want, got)
+	}
+}
